@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./sampleajax.js"></script>
+</head>
+<body>
+    <pre><h3>This Content is
+         Preloaded</h3></pre>
+    <button id="load">Load Content</button>
+    <div id="result"></div>
+
+</body>
+</html>
+
+sampleajax.js
+$(function(){
+$("#load").click(function(){
+    $.get("students.txt", function(Response){
+        $("#result").empty();
+        $("#result").append(Response);
+    });
+});
+});
+
+
+students.txt
+BSIT students are very obedient, honest and hardworking.
